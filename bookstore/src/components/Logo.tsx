@@ -1,6 +1,9 @@
 function Logo () {
     return(
-        <img src="/img/logo.png" alt="Logo bookStore" width="100"/>
+        <div>
+            <img src="/img/logo.png" alt="Logo bookStore" width="130"/>
+        </div>
+
     )
 }
 
