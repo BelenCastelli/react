@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='min-h-screen flex flex-col'>
       <Header/>
-      <main className='grow'>
+      <main className=' bg-gray-800 flex grow items-center justify-center' >
         {/* <Home/> */}
         <BooksPage/>
       </main>
