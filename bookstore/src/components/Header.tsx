@@ -14,19 +14,17 @@ function Header (){
         <header className={`bg-green-300 px-4 ${styles.header}`} >
 
             <Logo/>
-            <div className="hidden md:block">
+
+            <div className="hidden md:flex">
                 <Menu isOpenSidebar={isOpenSidebar}/>
             </div>
       
-
-            <button className="md:hidden px-4 relative z-10" onClick={() => setOpenSidebar(!isOpenSidebar)}>
+            <button className="md:hidden relative z-10 px-5" onClick={() => setOpenSidebar(!isOpenSidebar)}>
                 <RxHamburgerMenu size={35} />
             </button>
 
-            {isOpenSidebar && <Sidebar/>}
+            {isOpenSidebar && <Sidebar isOpenSidebar={isOpenSidebar} />}
         
-
-            
         </header>
     )
  
