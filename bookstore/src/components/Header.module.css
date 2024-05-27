@@ -5,5 +5,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    position: fixed;
+    position: 
+    fixed;
 }
+
+.active {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+  }

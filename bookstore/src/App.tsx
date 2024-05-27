@@ -8,6 +8,8 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import AddBook from './pages/AddBook';
 import EditBook from './pages/EditBook';
+import PrivateRoutes from './components/PrivateRoutes';
+import PublicRoutes from './components/PublicRoutes';
 // import Home from './pages/Home';
 
 function App() {
@@ -21,12 +23,19 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/Home' element={<Home/>}/>
-          <Route path='/Login' element={<Login/>}/>
-          <Route path='/Register' element={<Register/>}/>
-          <Route path='/Profile' element={<Profile/>}/>
-          <Route path='/Books' element={<BooksPage/>}/>
-          <Route path='/AddBook' element={<AddBook/>}/>
-          <Route path='/EditBook' element={<EditBook/>}/>
+          <Route element={<PublicRoutes/>}>
+            <Route path='/Login' element={<Login/>}/>
+            <Route path='/Register' element={<Register/>}/>
+          </Route>
+
+
+          <Route element={<PrivateRoutes/>}>
+            <Route path='/Profile' element={<Profile/>}/>
+            <Route path='/Books' element={<BooksPage/>}/>
+            <Route path='/AddBook' element={<AddBook/>}/>
+            <Route path='/EditBook' element={<EditBook/>}/>
+          </Route>
+
         </Routes>
       </main>
       <Footer/>
